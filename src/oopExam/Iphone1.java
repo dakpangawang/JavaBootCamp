@@ -1,35 +1,69 @@
 package oopExam;
 
-/*
-1)  Can you make a relation of Iphone1 with Phone Interface and AppleWatch Abstract class. [Complete the code after answering above]. [points: 30] . 
+public class Iphone1 extends AppleWatch  {
 
- */
+	@Override
+	public  void watchInfo() {
+		System.out.println("Giving implementation for Interface Watch from Class Iphone1");
+		
+	}
 
-public class Iphone1 {
-
-	/*2)
-	 * Assume 4 private variables here -- price (as int), Info (as String), user (as a char, M or F), madeInUSA (as boolean)
-	 * inside Iphone1 class. If the variables are private how can you use those
-	 * variable? What kind of concept you can use? use it just after the variables.
-	 * get the out come in TestPhone class. Complete this action and go to next.
-	 */
+	@Override
+	public void digitalWatchInfo() {
+		System.out.println("Giving implementation for Interface digitalWatch from Class Iphone1");
+		
+	}
 	
-	/*
-	 * 3) Again, here in Iphone1, we got 4 private variables we know. Create 2
-	 * constructors inside it using that 4 private variables -- default and
-	 * parameterized after those variables (obviously before methods and after
-	 * variables), now go to Iphone2 class.
-	 */
+	private int price;
+	private String info;
+	private char user;
+	private boolean madeInUSA;
+	public String memory = "256gb";
 	
-	/*
-	 * 1)
-	 * Create a method - regularClassInfo and print out all the features of a
-	 * regular class compared with Interface and Abstract class you know.
-	 */
+	public void setPrice (int price) {
+		this.price = price;
+	}
+	public void setInfo (String info) {
+		this.info = info;
+	}
+	public void setUser (char user) {
+		this.user = user;
+	}
+	public void setMadeInUSA (Boolean madeInUSA) {
+		this.madeInUSA = madeInUSA;
+	}
+	
+	public int getPrice () {
+		return price;
+	}
+	public String getInfo () {
+		return info;
+	}
+	public char getUser () {
+		return user;
+	}
+	
+	public boolean getMadeInUSA () {
+		return madeInUSA;
+	}
+	
+	public void regularClassInfo() {
+		getPrice();
+		getInfo();
+		getUser();
+		getMadeInUSA();
+		watchInfo();
+		digitalWatchInfo();
+	}
+	
+	public void youtube() {
+		System.out.println("Youtube feature is added");
+	}
 
-	/*
-	 * Write a method inside them related to one of the features like youtube and
-	 * print out related info.
-	 */
+	@Override
+	public void appleWatchInfo() {
+		System.out.println("only abstract method of apple watch");
+		
+	}
 
 }
